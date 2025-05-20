@@ -285,23 +285,31 @@ function addWheel(obj, x, y, z) {
 //////////////////////
 /* CHECK COLLISIONS */
 //////////////////////
-function checkCollisions() {}
+function checkCollisions() {
+    //TODO: CHECK IF THE ROBOT COLLIDES WITH THE TRAILER
+}
 
 ///////////////////////
 /* HANDLE COLLISIONS */
 ///////////////////////
-function handleCollisions() {}
+function handleCollisions() {
+    //TODO: HANDLE COLLISIONS
+    //CANT TELEPORT POSITION, HAVE TO MOVE IT UNTIL ITS OPTIMAL POSITION
+}
 
 ////////////
 /* UPDATE */
 ////////////
 function update() {
-
+    // CHECK IF ITS IN CAMIAO MODE AND AFTER IF ITS COUPLED(IF ITS COUPLED, IT CANNOT MOVE) 
     delta = clock.getDelta();
-
-    handleRobotMovements(delta);
+    // TODO: SEE IF THEY COLIDE AND HANDLE COLLISIONS ONLY ON TRAILER WITH CAMIAO
+    // checkCollisions();
+    // handleCollisions();
+    // OTHERWISE FAZER ISTO
     handleTrailerMovements();
-
+    // ALWAYS HAPPENS
+    handleRobotMovements(delta);
     var newPositions = updateTrailerPositions(delta);
     trailer.position.x = newPositions.x;
     trailer.position.z = newPositions.z;
