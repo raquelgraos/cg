@@ -286,7 +286,7 @@ function addWheel(obj, x, y, z) {
 /* CHECK COLLISIONS */
 //////////////////////
 function checkCollisions() {
-    //TODO: CHECK IF THE ROBOT COLLIDES WITH THE TRAILER
+    //TODO: CHECK IF THE HEAD OF THE CAMIAO COLLIDES WITH THE TRAILER
 }
 
 ///////////////////////
